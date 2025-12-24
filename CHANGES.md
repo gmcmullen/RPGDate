@@ -1,16 +1,17 @@
 # Changes
 
-## GitHub Pages Setup
-- Added `base: '/RPGDate/'` to vite.config.js for proper asset paths
-- Added `gh-pages` as dev dependency
-- Added `deploy` script to package.json
+## Blocking Search Engines & AI Crawlers
+- Added `<meta name="robots" content="noindex, nofollow" />` to index.html
+- Added meta tags for Google-specific crawlers including Google-Extended (used for AI training)
+- Added robots.txt with blocks for:
+  - All general crawlers
+  - GPTBot (OpenAI)
+  - ChatGPT-User
+  - CCBot (Common Crawl, used by many AI companies)
+  - anthropic-ai / Claude-Web (Anthropic)
+  - Google-Extended (Google's AI training crawler)
+  - PerplexityBot
+  - Omgilibot
+  - FacebookBot
 
-## Deployment Steps
-1. Install the new dependency: `npm install`
-2. Make sure your code is committed to git
-3. Run: `npm run deploy`
-4. Go to your GitHub repo → Settings → Pages
-5. Set Source to "gh-pages" branch
-6. Your site will be live at: `https://[your-username].github.io/RPGDate/`
-
-**Note:** If your repository name is different from "RPGDate", update the `base` value in `vite.config.js` to match your repo name.
+These changes prevent both search indexing and AI training data collection. Takes effect on next deployment with `npm run deploy`.
