@@ -1,9 +1,6 @@
 # Changes
 
-## Fixed GitHub Pages Deployment
-- Changed favicon path from `/vite.svg` to `./vite.svg` for proper loading with base path
-
-Rebuild and redeploy with:
-```
-npm run deploy
-```
+## Custom Domain Setup
+- Added CNAME file with `rpgdate.me` for custom domain
+- DNS A records are correctly configured
+- Redeploy with `npm run deploy` and wait 15-60 minutes for DNS propagation
